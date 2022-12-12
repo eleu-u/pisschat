@@ -7,7 +7,7 @@ run server.py to run a server that both wxpython and terminal clients can connec
 # clients
 pisschat-client-wx contains a cross-platform GUI client made with wxpython
 
-the code is organized into the "front end" and "back end" files, the first one containing only code having to do with wxpython GUI stuff while the second one has actual client-side TCP socket stuff, this makes the code more modular i think (im trying my best)
+the code is organized into the "front end" and "back end" files, the front-end containing only code having to do with wxpython GUI stuff while the back-end has actual client-side TCP socket stuff, this makes the code more modular i think (im trying my best)
 
 there are also pre-compiled binaries for amd64 linux and windows because i forgot to leave them out when i published this
 
