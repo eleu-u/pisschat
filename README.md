@@ -10,4 +10,5 @@ you can also use the terminal-client.py which has the same functionality as the 
 
 the wxpython version looks something like this
 ![screenshot_079](https://user-images.githubusercontent.com/86350819/206936861-8fac56fd-b234-4e2a-869b-511c6b8aa2ff.png)
+
 (dont mind the textbox on the upper right corner it's supposed to show a list of members but i havent gotten arround to implementing that yet)
