@@ -2,7 +2,7 @@
 pissy TCP chat client/server made with wxpython
 
 # server
-run server.py to run a server that both wxpython and terminal clients can connect to, you can use ngrok or port forward ur stuff to make it available for other people
+run server.py to run a server that both wxpython and terminal clients can connect to, you can use ngrok or port forwarding to make it available for other people
 
 # clients
 pisschat-client-wx contains a cross-platform GUI client made with wxpython, there are also pre-compiled binaries for amd64 linux and windows because i forgot to leave them out when i published this
