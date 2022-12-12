@@ -14,3 +14,7 @@ the wxpython version looks something like this (on linux at least, on windows it
 ![screenshot_079](https://user-images.githubusercontent.com/86350819/206936861-8fac56fd-b234-4e2a-869b-511c6b8aa2ff.png)
 
 (dont mind the textbox on the upper right corner it's supposed to show a list of members but i havent gotten arround to implementing that yet)
+
+there's also the terminal version which looks like this
+
+![screenshot_080](https://user-images.githubusercontent.com/86350819/206937223-8a4cd821-55c1-44c2-84f3-6d41c291ca42.png)
