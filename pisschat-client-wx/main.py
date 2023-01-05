@@ -3,28 +3,29 @@ import back_end
 
 # connect to server
 def ask_and_connect_to_server():
+	# ip address dialog
     ask_address = wx.TextEntryDialog(None, "enter IP address to connect to (leave blank for localhost:6166)", caption="connect")
-    if ask_address.ShowModal() == wx.ID_OK:
-        address = ask_address.GetValue()
-        if address == "":
-            address = "localhost:6166"
-        split_address = address.split(":")
-        if len(split_address) < 2:
-            wx.MessageBox("invalid IP address")
-            exit(1)
-        
-        # connect to server through IP and port provided
-        back_end.connect_server(split_address[0], split_address[1], messages_box)
-
-        # ask for nickname
-        ask_name = wx.TextEntryDialog(None, "enter name", caption="set nickname")
-        ask_name.ShowModal()
-        if ask_name.GetValue() != "":
-            back_end.send_message("!set-name " + ask_name.GetValue())
-        ask_name.Destroy() # destroying this makes the app close properly
-    else:
+    if ask_address.ShowModal() != wx.ID_OK:
         wx.MessageBox("please enter an IP address")
         exit(1)
+	
+    address = ask_address.GetValue()
+    if address == "":
+        address = "localhost:6166"
+    split_address = address.split(":")
+    if len(split_address) < 2:
+        wx.MessageBox("invalid IP address")
+        exit(1)
+    
+    # connect to server through IP and port provided
+    back_end.connect_server(split_address[0], split_address[1], messages_box)
+
+    # ask for nickname
+    ask_name = wx.TextEntryDialog(None, "enter name", caption="set nickname")
+    ask_name.ShowModal()
+    if ask_name.GetValue() != "":
+        back_end.send_message("!set-name " + ask_name.GetValue())
+    ask_name.Destroy() # destroying this makes the app close properly
 
     # destroy the dialog so that the app closes properly
     ask_address.Destroy()
